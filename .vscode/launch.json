@@ -40,18 +40,40 @@
             "type": "node",
             "request": "launch",
             "name": "Launch TestScript4:JavaScript",
-            "preLaunchTask": "Compile TypeScript4-JavaScript",
+            "preLaunchTask": "Start TypeScript4-JavaScript",
             "program": "${workspaceFolder}/TestScript4/http_server/main.js"
         },
         {
             "type": "node",
             "request": "launch",
             "name": "Launch TestScript4:TypeScript",
-            "preLaunchTask": "Compile TypeScript4-TypeScript",
+            "preLaunchTask": "Start TypeScript4-TypeScript",
             "runtimeArgs": ["-r", "./TestScript4/node_modules/ts-node/register"],
             "args": ["${workspaceFolder}/TestScript4/http_server/main.ts"],
             "protocol": "inspector",
             "console": "integratedTerminal"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch ts-sample:Frontend",
+            "preLaunchTask": "Start ts-sample-Frontend",
+            "url": "http://localhost:3005",
+            "webRoot": "${workspaceFolder}/typescript_sample/frontend",
+            "sourceMaps": true
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch ts-sample:Backend",
+            "runtimeExecutable": "yarn",
+            "runtimeArgs": ["ts-node", "server.ts"],
+            "cwd":"${workspaceFolder}/typescript_sample/backend",
+            "skipFiles":[
+                "<node_internals>/**"
+            ],
+            "sourceMaps":true,
+            "outFiles": ["${workspaceFolder}/typescript_sample/backend/dist/**/*.js"]
         }
     ]
 }

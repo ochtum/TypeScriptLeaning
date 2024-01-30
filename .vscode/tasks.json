@@ -54,17 +54,46 @@
       },
       {
         //tsconfigはRoot Directoryから見た相対パスで指定する
-        "label": "Compile TypeScript4-JavaScript",
+        "label": "Start TypeScript4-JavaScript",
         "type": "shell",
         "command": "start chrome http://localhost:3003",
         "problemMatcher": []
       },
       {
         //tsconfigはRoot Directoryから見た相対パスで指定する
-        "label": "Compile TypeScript4-TypeScript",
+        "label": "Start TypeScript4-TypeScript",
         "type": "shell",
         "command": "start chrome http://localhost:3004",
         "problemMatcher": []
+      },
+      {
+        //tsconfigはRoot Directoryから見た相対パスで指定する
+        "label": "Start ts-sample-Frontend",
+        "type": "shell",
+        "command": "yarn",
+        "args": ["dev"],
+        "options": {
+          "cwd": "${workspaceFolder}/typescript_sample/frontend"
+        },
+        "isBackground": true,
+        "presentation": {
+          "reveal": "always",
+          "panel": "new"
+        },
+        "problemMatcher": {
+          "owner": "custom",
+          "pattern": {
+            "regexp": ".",
+            "file": 1,
+            "location": 2,
+            "message": 3
+          },
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": ".*",
+            "endsPattern": ".*"
+          }
+        }
       }
     ]
   }

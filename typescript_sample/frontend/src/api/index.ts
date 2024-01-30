@@ -3,7 +3,7 @@ import { Todo } from "../../../types";
 
 export const fetcher = async (path: string) => {
     try {
-        const res = await fetch("http://localhost:3000" + path);
+        const res = await fetch("http://localhost:3006" + path);
         return res.json();
     } catch (error) {
         alert(error);

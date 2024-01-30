@@ -3,7 +3,7 @@ import { Todo } from '../types';
 import cors from 'cors';
 
 const app: Express = express();
-const port = 3000;
+const port = 3006;
 
 app.use(cors());
 
