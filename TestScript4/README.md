@@ -1,5 +1,12 @@
 # Node.jsでHTTPサーバーを構築した場合の、JavaScriptとTypeScriptのソースコード比較
 
+## 事前準備
+TestScript4ディレクトリで以下のコマンドを実行する。
+```bash
+npm install --save-dev @types/node
+npm install --save-dev ts-node
+```
+
 ## 使い方
 (1) JavaScriptの場合
 ```bash
