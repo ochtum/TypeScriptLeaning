@@ -1,5 +1,5 @@
 import * as http from "http";
-const port = 3000;
+const port = 3004;
 
 const server = http.createServer((request: http.IncomingMessage, response: http.ServerResponse) => {
     response.writeHead(200, {

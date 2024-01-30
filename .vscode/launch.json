@@ -35,6 +35,23 @@
             "sourceMapPathOverrides": {
                 "webpack:///./*": "${webRoot}/src/*"
             }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch TestScript4:JavaScript",
+            "preLaunchTask": "Compile TypeScript4-JavaScript",
+            "program": "${workspaceFolder}/TestScript4/http_server/main.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch TestScript4:TypeScript",
+            "preLaunchTask": "Compile TypeScript4-TypeScript",
+            "runtimeArgs": ["-r", "./TestScript4/node_modules/ts-node/register"],
+            "args": ["${workspaceFolder}/TestScript4/http_server/main.ts"],
+            "protocol": "inspector",
+            "console": "integratedTerminal"
         }
     ]
 }

@@ -1,4 +1,5 @@
 # Node.jsでHTTPサーバーを構築した場合の、JavaScriptとTypeScriptのソースコード比較
+
 ## 使い方
 (1) JavaScriptの場合
 ```bash

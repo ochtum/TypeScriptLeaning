@@ -51,6 +51,20 @@
                 "endsPattern": "Compiled .*"
             }            
         }
+      },
+      {
+        //tsconfigはRoot Directoryから見た相対パスで指定する
+        "label": "Compile TypeScript4-JavaScript",
+        "type": "shell",
+        "command": "start chrome http://localhost:3003",
+        "problemMatcher": []
+      },
+      {
+        //tsconfigはRoot Directoryから見た相対パスで指定する
+        "label": "Compile TypeScript4-TypeScript",
+        "type": "shell",
+        "command": "start chrome http://localhost:3004",
+        "problemMatcher": []
       }
     ]
   }
