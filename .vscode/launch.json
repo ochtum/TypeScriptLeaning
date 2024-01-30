@@ -10,7 +10,7 @@
             "name": "Launch TestScript",
             "preLaunchTask": "Compile TypeScript",
             "cwd": "${workspaceFolder}\\TestScript",
-            "program": "${file}"
+            "program": "${workspaceFolder}/TestScript/hello.ts"
         },
         {
             "type": "chrome",
