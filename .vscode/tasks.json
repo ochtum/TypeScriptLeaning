@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        //tsconfigはRoot Directoryから見た相対パスで指定する
+        "label": "Compile TypeScript",
+        "type": "typescript",
+        "tsconfig": "./TestScript/tsconfig.json",
+        "problemMatcher": ["$tsc"]
+      },
+      {
+        // yarnはcwdオプションでRoot Directoryから見た相対パスで指定する
+        "label": "Start TypeScript2",
+        "type": "shell",
+        "command": "yarn --cwd TestScript2 start",
+        "group": {
+            "kind": "test",
+            "isDefault": true
+        },
+        "isBackground": true,
+        "problemMatcher": {
+            "owner": "custom",
+            "pattern": {
+                "regexp": "ˆ$"
+            },
+            "background": {
+                "activeOnStart": true,
+                "beginsPattern": "Compiling...",
+                "endsPattern": "Compiled .*"
+            }            
+        }
+      },
+      {
+        // yarnはcwdオプションでRoot Directoryから見た相対パスで指定する
+        "label": "Start TypeScript3",
+        "type": "shell",
+        "command": "yarn --cwd TestScript3 start",
+        "group": {
+            "kind": "test",
+            "isDefault": true
+        },
+        "isBackground": true,
+        "problemMatcher": {
+            "owner": "custom",
+            "pattern": {
+                "regexp": "ˆ$"
+            },
+            "background": {
+                "activeOnStart": true,
+                "beginsPattern": "Compiling...",
+                "endsPattern": "Compiled .*"
+            }            
+        }
+      }
+    ]
+  }

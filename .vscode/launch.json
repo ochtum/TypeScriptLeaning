@@ -1,0 +1,40 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch TestScript",
+            "preLaunchTask": "Compile TypeScript",
+            "cwd": "${workspaceFolder}\\TestScript",
+            "program": "${file}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch TestScript2",
+            "preLaunchTask": "Start TypeScript2",
+            "url":"http://localhost:3001",
+            "webRoot": "${workspaceFolder}/TestScript2",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "webpack:///./*": "${webRoot}/src/*"
+            }
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch TestScript3",
+            "preLaunchTask": "Start TypeScript3",
+            "url":"http://localhost:3002",
+            "webRoot": "${workspaceFolder}/TestScript3",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "webpack:///./*": "${webRoot}/src/*"
+            }
+        }
+    ]
+}

@@ -3,6 +3,19 @@ React開発サーバーで実行するコマンド
 ```bash
 yarn start
 ```
+
+※デバッグ時、なぜか同じページが2回立ち上がるが、最後に立ち上がったページでデバッグすること(起動まで少し時間かかるほうです)。<br />
+※デバッグ停止時、ターミナル側も忘れずに停止(Ctrl + C)すること。listen portが解放出来ていない場合は、コマンドで解放できます。<br /><br />
+・listen port確認コマンド
+s```bash
+netstat -a
+```
+<br />
+・listen port解放コマンド
+```bash
+npx kill-port PORT_NUMBER
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
