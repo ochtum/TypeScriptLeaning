@@ -1,4 +1,11 @@
 # サンプルソース説明
+## 事前準備
+以下コマンドを実行する
+```bash
+npm install typescript -g
+npm install @types/node -g
+```
+
 ## TestScript
 Hello Worldを表示するだけのTypeScriptサンプル
 ## TestScript2
