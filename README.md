@@ -4,6 +4,7 @@
 ```bash
 npm install typescript -g
 npm install @types/node -g
+npm install react-scripts -g
 ```
 
 ## TestScript
